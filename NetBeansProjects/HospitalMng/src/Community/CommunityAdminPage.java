@@ -224,7 +224,7 @@ public class CommunityAdminPage extends javax.swing.JFrame {
         String community = communityTextField.getText();
         String homeAddress = homeAdressTextField.getText();
         Integer zipCode = Integer.valueOf(pinCodeTextField.getText());
-         String strZipCode= Integer.toString(zipCode);
+        String strZipCode= Integer.toString(zipCode);
         
          if(city.isEmpty() || strZipCode.isEmpty()|| community.isEmpty() || homeAddress.isEmpty()){
             JOptionPane.showMessageDialog(this,
@@ -295,35 +295,6 @@ public class CommunityAdminPage extends javax.swing.JFrame {
 
     private void communityCreateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_communityCreateButtonMouseClicked
         // TODO add your handling code here:
-         DefaultTableModel table= (DefaultTableModel)jCommunityTable.getModel();
-         String city = table.getValueAt(jCommunityTable.getSelectedRow(), 0).toString();
-        String community = table.getValueAt(jCommunityTable.getSelectedRow(), 1).toString();
-        String homeAddress = table.getValueAt(jCommunityTable.getSelectedRow(), 2).toString();
-        String zipCode = table.getValueAt(jCommunityTable.getSelectedRow(), 3).toString();
-      
-       
-        if(city.isEmpty() || zipCode.isEmpty()|| community.isEmpty() || homeAddress.isEmpty()){
-            JOptionPane.showMessageDialog(this,
-                "Please Enter all fields",
-                "Try Again",
-                JOptionPane.ERROR_MESSAGE);
-        } else{
-            if(zipCode.length()!= 5){
-                JOptionPane.showMessageDialog(this,
-                "Invalid Zip Code Entered",
-                "Try Again",
-                JOptionPane.ERROR_MESSAGE);
-                 pinCodeTextField.setText(null);
-            }
-            else{ 
-               
-                    
-        table.addRow(new Object[]{city, community, homeAddress , zipCode});
-        cityTextField.setText(city);
-        communityTextField.setText(community);
-        homeAdressTextField.setText(homeAddress);
-        pinCodeTextField.setText(zipCode);}
-      }
         
     }//GEN-LAST:event_communityCreateButtonMouseClicked
 
