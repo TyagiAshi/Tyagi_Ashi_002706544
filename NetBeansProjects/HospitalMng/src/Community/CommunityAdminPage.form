@@ -67,7 +67,7 @@
                   <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="pinCodeTextField" pref="180" max="32767" attributes="0"/>
-                      <Component id="homeAdressTextField" max="32767" attributes="0"/>
+                      <Component id="hospitalTextField" max="32767" attributes="0"/>
                       <Component id="communityTextField" alignment="0" max="32767" attributes="0"/>
                       <Component id="cityTextField" alignment="0" max="32767" attributes="0"/>
                   </Group>
@@ -118,7 +118,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                      <Component id="homeAdressTextField" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="hospitalTextField" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -141,7 +141,7 @@
               <Font name="Segoe UI" size="24" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Community Admin"/>
+            <Property name="text" type="java.lang.String" value="Hospital Management"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
@@ -165,7 +165,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Home Address"/>
+            <Property name="text" type="java.lang.String" value="Hospital"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="cityTextField">
@@ -175,7 +175,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="communityTextFieldActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="homeAdressTextField">
+        <Component class="javax.swing.JTextField" name="hospitalTextField">
         </Component>
         <Component class="javax.swing.JButton" name="communityCreateButton">
           <Properties>
@@ -214,7 +214,7 @@
                   <Table columnCount="4" rowCount="0">
                     <Column editable="true" title="City" type="java.lang.Object"/>
                     <Column editable="true" title="Community" type="java.lang.Object"/>
-                    <Column editable="true" title="HomeAddress" type="java.lang.Object"/>
+                    <Column editable="true" title="Hospital" type="java.lang.Object"/>
                     <Column editable="true" title="ZipCode" type="java.lang.Object"/>
                   </Table>
                 </Property>

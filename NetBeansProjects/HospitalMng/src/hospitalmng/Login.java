@@ -1,4 +1,5 @@
 
+import SystemAdmin.SystemAdmin;
 import javax.swing.JOptionPane;
 
 /*
@@ -172,7 +173,7 @@ public class Login extends javax.swing.JFrame {
         int user_role = jComboBox.getSelectedIndex();
         
          switch(user_role){
-            case 1-> { SysAdmin_JFrame sysA = new SysAdmin_JFrame();
+            case 1-> { SystemAdmin sysA = new SystemAdmin();
                         sysA.setVisible(true);
             }
             case 2 -> { Patient p = new Patient();
@@ -181,7 +182,7 @@ public class Login extends javax.swing.JFrame {
             case 3 -> { Doctor d = new Doctor();
                         d.setVisible(true);
             }
-            case 4 -> { CoomunityAdmin community = new CommunityAdmin();
+            case 4 -> { Community.CommunityAdminPage community = new Community.CommunityAdminPage();
                         community.setVisible(true);
             }
             case 5 -> { HospitalAdmin h = new HospitalAdmin();

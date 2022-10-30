@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ashit
+ * @author ashi
  */
 public class PatientDirectory {
     private ArrayList<Patient> patientDirectory;
@@ -23,17 +23,17 @@ public class PatientDirectory {
         return patientDirectory;
     }
 
-    public void setPersonDirectory(ArrayList<Patient> patientDirectory) {
+    public void setPatientDirectory(ArrayList<Patient> patientDirectory) {
         this.patientDirectory = patientDirectory;
     }
       
    
-     public Patient addNewPerson(Patient patient) {
+     public Patient addNewPatient(Patient patient) {
         patientDirectory.add(patient);
         return patient;      
     }
      
-    public void removePerson(Patient patient){
+    public void removePatient(Patient patient){
         patientDirectory.remove(patient);
     }
     

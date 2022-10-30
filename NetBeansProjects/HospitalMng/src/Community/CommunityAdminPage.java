@@ -39,7 +39,7 @@ public class CommunityAdminPage extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         cityTextField = new javax.swing.JTextField();
         communityTextField = new javax.swing.JTextField();
-        homeAdressTextField = new javax.swing.JTextField();
+        hospitalTextField = new javax.swing.JTextField();
         communityCreateButton = new javax.swing.JButton();
         communityUpdateButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -55,7 +55,7 @@ public class CommunityAdminPage extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Community Admin");
+        jLabel1.setText("Hospital Management");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setText("City");
@@ -64,7 +64,7 @@ public class CommunityAdminPage extends javax.swing.JFrame {
         jLabel3.setText("Community");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel4.setText("Home Address");
+        jLabel4.setText("Hospital");
 
         communityTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +103,7 @@ public class CommunityAdminPage extends javax.swing.JFrame {
 
             },
             new String [] {
-                "City", "Community", "HomeAddress", "ZipCode"
+                "City", "Community", "Hospital", "ZipCode"
             }
         ));
         jCommunityTable.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -147,7 +147,7 @@ public class CommunityAdminPage extends javax.swing.JFrame {
                 .addGap(55, 55, 55)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(pinCodeTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
-                    .addComponent(homeAdressTextField)
+                    .addComponent(hospitalTextField)
                     .addComponent(communityTextField)
                     .addComponent(cityTextField))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -186,7 +186,7 @@ public class CommunityAdminPage extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(homeAdressTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(hospitalTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(communityCreateButton)
@@ -222,11 +222,18 @@ public class CommunityAdminPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         String city = cityTextField.getText();
         String community = communityTextField.getText();
-        String homeAddress = homeAdressTextField.getText();
-        Integer zipCode = Integer.valueOf(pinCodeTextField.getText());
-        String strZipCode= Integer.toString(zipCode);
+        String hospital = hospitalTextField.getText();
+       // Integer zipCode = Integer.valueOf(pinCodeTextField.getText());
+        String strZipCode=pinCodeTextField.getText();
+        try {
+                Integer zipCode = Integer.valueOf(strZipCode);
+            }
+            catch(NumberFormatException e){JOptionPane.showMessageDialog(this,
+                "Please Enter Numbers",
+                "Try Again",
+                JOptionPane.ERROR_MESSAGE);}
         
-         if(city.isEmpty() || strZipCode.isEmpty()|| community.isEmpty() || homeAddress.isEmpty()){
+         if(city.isEmpty() || strZipCode.isEmpty()|| community.isEmpty() || hospital.isEmpty()){
             JOptionPane.showMessageDialog(this,
                 "Please Enter all fields",
                 "Try Again",
@@ -241,11 +248,11 @@ public class CommunityAdminPage extends javax.swing.JFrame {
             }
             else{
                 DefaultTableModel table= (DefaultTableModel)jCommunityTable.getModel();
-                table.addRow(new Object[]{city, community, homeAddress , zipCode});
+                table.addRow(new Object[]{city, community, hospital , strZipCode});
             }
         cityTextField.setText("");
          communityTextField.setText("");
-         homeAdressTextField.setText("");
+         hospitalTextField.setText("");
          pinCodeTextField.setText("");
          }  
     }//GEN-LAST:event_communityCreateButtonActionPerformed
@@ -270,7 +277,7 @@ public class CommunityAdminPage extends javax.swing.JFrame {
          if(jCommunityTable.getSelectedRowCount()==1){
              String city= cityTextField.getText();
              String community= communityTextField.getText();
-             String homeAddress=  homeAdressTextField.getText();
+             String homeAddress=  hospitalTextField.getText();
              Integer zipCode= Integer.valueOf(pinCodeTextField.getText());
              
             tb1Model.setValueAt(city,jCommunityTable.getSelectedRow(),0);
@@ -289,7 +296,7 @@ public class CommunityAdminPage extends javax.swing.JFrame {
          
          cityTextField.setText("");
          communityTextField.setText("");
-         homeAdressTextField.setText("");
+         hospitalTextField.setText("");
          pinCodeTextField.setText("");
     }//GEN-LAST:event_communityUpdateButton2MouseClicked
 
@@ -309,7 +316,7 @@ public class CommunityAdminPage extends javax.swing.JFrame {
         
        cityTextField.setText(city);
         communityTextField.setText(community);
-        homeAdressTextField.setText(homeAddress);
+        hospitalTextField.setText(homeAddress);
         pinCodeTextField.setText(zipCode);
       
         
@@ -355,7 +362,7 @@ public class CommunityAdminPage extends javax.swing.JFrame {
     private javax.swing.JButton communityCreateButton;
     private javax.swing.JTextField communityTextField;
     private javax.swing.JButton communityUpdateButton2;
-    private javax.swing.JTextField homeAdressTextField;
+    private javax.swing.JTextField hospitalTextField;
     private javax.swing.JTable jCommunityTable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
