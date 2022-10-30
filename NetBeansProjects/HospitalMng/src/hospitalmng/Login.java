@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -34,11 +37,11 @@ public class Login extends javax.swing.JFrame {
         jButtonLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabelUserType = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(153, 255, 204));
 
         jLabelUsername.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelUsername.setText("Username");
@@ -67,10 +70,10 @@ public class Login extends javax.swing.JFrame {
         jLabelUserType.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabelUserType.setText("UserType");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "System Admin", "Patient Admin", "Doctor Admin", "Community Admin", "Hospital Admin" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "System Admin", "Patient Admin", "Doctor Admin", "Community Admin", "Hospital Admin" }));
+        jComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jComboBoxActionPerformed(evt);
             }
         });
 
@@ -94,7 +97,7 @@ public class Login extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextFieldUsername)
                             .addComponent(jPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(72, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -117,7 +120,7 @@ public class Login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabelUserType)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addComponent(jButtonLogin)
                 .addContainerGap(112, Short.MAX_VALUE))
@@ -148,13 +151,57 @@ public class Login extends javax.swing.JFrame {
         String userName = jTextFieldUsername.getText();
         String password = jPasswordField.getText();
         
+        if (password.contains("divya") && (userName.contains("divya"))) 
+        {
+            jTextFieldUsername.setText(null);
+            jPasswordField.setText(null);
+            systemExit();
+            
+//            SysAdmin_JFrame Info = new SysAdmin_JFrame();
+//            Info.setVisible(true);
+            this.dispose();
+        }
+        
+        else 
+        {
+        JOptionPane.showMessageDialog(null,"Invalid Login Details", "Login Error",JOptionPane.ERROR_MESSAGE);
+            jPasswordField.setText(null);
+            jTextFieldUsername.setText(null);   
+        }
+        
+        int user_role = jComboBox.getSelectedIndex();
+        
+         switch(user_role){
+            case 1-> { SysAdmin_JFrame sysA = new SysAdmin_JFrame();
+                        sysA.setVisible(true);
+            }
+            case 2 -> { Patient p = new Patient();
+                        p.setVisible(true);
+            }
+            case 3 -> { Doctor d = new Doctor();
+                        d.setVisible(true);
+            }
+            case 4 -> { CoomunityAdmin community = new CommunityAdmin();
+                        community.setVisible(true);
+            }
+            case 5 -> { HospitalAdmin h = new HospitalAdmin();
+                        h.setVisible(true);
+            }   
+        } 
+//        this.toBack();
+//        SysAdmin_JFrame newframe = new SysAdmin_JFrame();
+//        newframe.setVisible(true);
+//        newframe.toFront();
+        
+   
+        
     }//GEN-LAST:event_jButtonLoginActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxActionPerformed
         // TODO add your handling code here:
-        String comboBoxValue= jComboBox1.getSelectedItem().toString();
+        String comboBoxValue= jComboBox.getSelectedItem().toString();
         
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,7 +240,7 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonLogin;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelPassword;
     private javax.swing.JLabel jLabelUserType;
@@ -202,4 +249,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField jPasswordField;
     private javax.swing.JTextField jTextFieldUsername;
     // End of variables declaration//GEN-END:variables
+
+    private void systemExit() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
