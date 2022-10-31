@@ -19,7 +19,7 @@ import utility.UtilityFunctions;
 
 /**
  *
- * @author Arpit Jain
+ * @author Ashit
  */
 public class AddEncounter extends javax.swing.JPanel {
     JPanel mainWorkArea;
@@ -92,7 +92,7 @@ public class AddEncounter extends javax.swing.JPanel {
 
         jTextField4.setText("jTextField4");
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 102, 102));
         setForeground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(650, 600));
 

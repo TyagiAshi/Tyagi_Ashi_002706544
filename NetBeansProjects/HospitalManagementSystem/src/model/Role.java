@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author user
+ * @author Ashit
  */
 public class Role {
     

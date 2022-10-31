@@ -38,7 +38,7 @@
         <Container class="javax.swing.JPanel" name="menuBar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="a1" green="7d" red="11" type="rgb"/>
+              <Color blue="66" green="66" red="ff" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
@@ -81,7 +81,7 @@
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/res/AED_ASS_4_heart.png"/>
+                  <Image iconType="3" name="/res/Arrowhead-Left-01-22.png"/>
                 </Property>
               </Properties>
               <Events>

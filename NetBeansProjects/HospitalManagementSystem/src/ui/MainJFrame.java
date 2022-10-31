@@ -10,7 +10,7 @@ import model.Sys;
 
 /**
  *
- * @author Arpit Jain
+ * @author Ashit
  */
 public class MainJFrame extends javax.swing.JFrame {
 

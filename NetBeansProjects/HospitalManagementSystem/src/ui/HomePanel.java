@@ -14,7 +14,7 @@ import ui.LoginScreen;
 
 /**
  *
- * @author  Arpit Jain
+ * @author  Ashit
  */
 public class HomePanel extends javax.swing.JPanel {
     JPanel mainWorkArea;
@@ -51,7 +51,7 @@ public class HomePanel extends javax.swing.JPanel {
         splitPane.setDividerSize(2);
         splitPane.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        menuBar.setBackground(new java.awt.Color(17, 125, 161));
+        menuBar.setBackground(new java.awt.Color(255, 102, 102));
 
         btnLogOut.setText("Log Out");
         btnLogOut.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +60,7 @@ public class HomePanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/AED_ASS_4_heart.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/Arrowhead-Left-01-22.png"))); // NOI18N
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -183,7 +183,7 @@ public class HomePanel extends javax.swing.JPanel {
     
     public void clickTerritories(HomeScreen homeScreen) {
 
-        JPanel selectedPanel = new Territories(workArea,sys,homeScreen);
+        JPanel selectedPanel = new Communities(workArea,sys,homeScreen);
         
         workArea.add("WorkAreaJPanel",selectedPanel);
         CardLayout layout = (CardLayout) workArea.getLayout();

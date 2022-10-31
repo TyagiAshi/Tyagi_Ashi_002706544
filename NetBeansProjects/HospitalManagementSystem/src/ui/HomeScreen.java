@@ -7,7 +7,7 @@ import model.Sys;
 
 /**
  *
- * @author  Arpit Jain
+ * @author  Ashit
  */
 public class HomeScreen extends javax.swing.JPanel {
   
@@ -42,7 +42,7 @@ public class HomeScreen extends javax.swing.JPanel {
         setForeground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(650, 600));
 
-        jPanel1.setBackground(new java.awt.Color(17, 125, 161));
+        jPanel1.setBackground(new java.awt.Color(255, 102, 102));
         jPanel1.setForeground(new java.awt.Color(17, 125, 161));
         jPanel1.setToolTipText("");
 
@@ -108,7 +108,7 @@ public class HomeScreen extends javax.swing.JPanel {
 
         lblAddPerson1.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
         lblAddPerson1.setForeground(new java.awt.Color(255, 255, 255));
-        lblAddPerson1.setText("Territories");
+        lblAddPerson1.setText("Communities");
         lblAddPerson1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lblAddPerson1MouseEntered(evt);

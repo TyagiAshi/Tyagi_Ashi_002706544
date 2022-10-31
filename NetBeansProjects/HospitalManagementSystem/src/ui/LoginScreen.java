@@ -13,7 +13,7 @@ import model.Sys;
 
 /**
  *
- * @author Arpit Jain
+ * @author Ashit
  */
 public class LoginScreen extends javax.swing.JPanel {
 
@@ -58,7 +58,7 @@ public class LoginScreen extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        lblLoginGrid.setBackground(new java.awt.Color(153, 153, 255));
+        lblLoginGrid.setBackground(new java.awt.Color(255, 102, 102));
         lblLoginGrid.setForeground(new java.awt.Color(153, 153, 255));
 
         lblLoginText.setBackground(new java.awt.Color(255, 255, 255));
@@ -228,7 +228,7 @@ public class LoginScreen extends javax.swing.JPanel {
 
         }
                     else if (txtUsername.getText().equals("community") && txtPassword.getText().equals("123")) {
-         JPanel selectedPanel = new Territories(mainWorkArea,sys);
+         JPanel selectedPanel = new Communities(mainWorkArea,sys);
         
         mainWorkArea.add("WorkAreaJPanel",selectedPanel);
         CardLayout layout = (CardLayout) mainWorkArea.getLayout();

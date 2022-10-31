@@ -9,7 +9,7 @@ import static model.Patient.count;
 
 /**
  *
- * @author  Arpit Jain
+ * @author  Ashit
  */
 public class User {
     

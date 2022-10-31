@@ -22,7 +22,7 @@ import utility.UtilityFunctions;
 
 /**
  *
- * @author   Arpit Jain
+ * @author   Ashit
  */
 public class Dashboard extends javax.swing.JPanel {
   JPanel mainWorkArea;
@@ -105,7 +105,6 @@ public class Dashboard extends javax.swing.JPanel {
 
         jTextField4 = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        lblUserpic = new javax.swing.JLabel();
         lblName = new javax.swing.JLabel();
         lblDOB = new javax.swing.JLabel();
         lblAge = new javax.swing.JLabel();
@@ -139,14 +138,12 @@ public class Dashboard extends javax.swing.JPanel {
 
         jTextField4.setText("jTextField4");
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 104, 104));
         setForeground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(650, 600));
 
         jSeparator1.setForeground(new java.awt.Color(17, 125, 161));
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-
-        lblUserpic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/AED_ASS_4_pass.png"))); // NOI18N
 
         lblName.setFont(new java.awt.Font("Segoe UI Light", 1, 18)); // NOI18N
         lblName.setText("Name:");
@@ -235,11 +232,11 @@ public class Dashboard extends javax.swing.JPanel {
 
         lblCommunity.setText("Community:");
 
-        cmbCommunitySearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbCommunitySearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "jamaica plain", "brandies" }));
 
         lblCity.setText("City:");
 
-        cmbCity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbCity.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Boston", "Waltham" }));
 
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {
@@ -277,22 +274,17 @@ public class Dashboard extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(45, 45, 45)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblName)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lblDOB)
+                                .addComponent(lblAge)))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblName)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(lblDOB)
-                                        .addComponent(lblAge)))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblNameData)
-                                    .addComponent(lblAgeData)
-                                    .addComponent(lblDOBdata, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(44, 44, 44)
-                                .addComponent(lblUserpic, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(2, 2, 2)))
+                            .addComponent(lblNameData)
+                            .addComponent(lblAgeData)
+                            .addComponent(lblDOBdata, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(19, 19, 19)
                         .addComponent(txtAddr, 0, 0, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(89, 89, 89)
@@ -409,9 +401,7 @@ public class Dashboard extends javax.swing.JPanel {
                                             .addComponent(btnDelete))))
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
-                        .addComponent(lblUserpic, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
+                        .addGap(339, 339, 339)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lblName)
                             .addComponent(lblNameData))
@@ -681,7 +671,7 @@ public class Dashboard extends javax.swing.JPanel {
             icon = new ImageIcon("AED_ASS_4_user.png");
         }
         
-        lblUserpic.setIcon(icon);
+        //lblUserpic.setIcon(icon);
         
         
         
@@ -888,7 +878,7 @@ public class Dashboard extends javax.swing.JPanel {
         icon = new ImageIcon("C://Users//user//Documents//NetBeansProjects//Lab_3_Skeleton//src//res//AED_ASS_4_user.png");
         //icon = utility.scaleImage(icon, 320, 240);
         
-        lblUserpic.setIcon(icon);
+        //lblUserpic.setIcon(icon);
         
     }
     
@@ -905,7 +895,7 @@ public class Dashboard extends javax.swing.JPanel {
         icon = new ImageIcon(person.getImagePath());
         //icon = utility.scaleImage(icon, 320, 240);
         
-        lblUserpic.setIcon(icon);
+        //lblUserpic.setIcon(icon);
     }
     
     
@@ -966,7 +956,6 @@ public class Dashboard extends javax.swing.JPanel {
     private javax.swing.JLabel lblName2;
     private javax.swing.JLabel lblNameData;
     private javax.swing.JLabel lblSlash;
-    private javax.swing.JLabel lblUserpic;
     private javax.swing.JTable tblEncHist;
     private javax.swing.JScrollPane tblEncounterHistory;
     private javax.swing.JScrollPane txtAddr;

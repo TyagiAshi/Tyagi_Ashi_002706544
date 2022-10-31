@@ -18,7 +18,7 @@ import utility.UtilityFunctions;
 
 /**
  *
- * @author  Arpit Jain
+ * @author  Ashit
  */
 public class AddPatient extends javax.swing.JPanel {
   
@@ -77,7 +77,6 @@ public class AddPatient extends javax.swing.JPanel {
         lblPatientId = new javax.swing.JLabel();
         btnPatientSave = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         btnClear = new javax.swing.JButton();
         chkIsPerson = new javax.swing.JCheckBox();
 
@@ -112,7 +111,7 @@ public class AddPatient extends javax.swing.JPanel {
         jTextArea1.setRows(5);
         txtAddr.setViewportView(jTextArea1);
 
-        jPanel1.setBackground(new java.awt.Color(17, 125, 161));
+        jPanel1.setBackground(new java.awt.Color(255, 102, 102));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
         lblEncounterHist1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 24)); // NOI18N
@@ -193,13 +192,6 @@ public class AddPatient extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setText("Attach");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         btnClear.setText("Clear");
         btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -231,10 +223,8 @@ public class AddPatient extends javax.swing.JPanel {
                                 .addComponent(lblTel)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtTel, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jButton1)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                     .addComponent(btnPatientSave)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                     .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -274,7 +264,7 @@ public class AddPatient extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnClear, btnPatientSave, btnSearch, jButton1});
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnClear, btnPatientSave, btnSearch});
 
         jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {cmbCity, txtStreetName});
 
@@ -316,8 +306,7 @@ public class AddPatient extends javax.swing.JPanel {
                 .addGap(38, 38, 38)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnPatientSave)
-                    .addComponent(btnSearch)
-                    .addComponent(jButton1))
+                    .addComponent(btnSearch))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnClear)
                 .addContainerGap(93, Short.MAX_VALUE))
@@ -332,7 +321,7 @@ public class AddPatient extends javax.swing.JPanel {
                 .addComponent(txtAddr, 0, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -477,22 +466,6 @@ public class AddPatient extends javax.swing.JPanel {
         
         }
     }//GEN-LAST:event_cmbCityItemStateChanged
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        
-        try{
-            JFileChooser chooser = new JFileChooser();
-            chooser.showOpenDialog(null);
-
-            File f = chooser.getSelectedFile();
-            imageDir = f.getAbsolutePath();
-        } catch(Exception e){
-            
-        }
-        
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO add your handling code here:
@@ -767,7 +740,6 @@ public class AddPatient extends javax.swing.JPanel {
     private javax.swing.JCheckBox chkIsPerson;
     private javax.swing.JComboBox<String> cmbCity;
     private javax.swing.JComboBox<String> cmbCommunity;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextArea jTextArea1;
