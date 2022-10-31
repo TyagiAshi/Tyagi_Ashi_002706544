@@ -77,7 +77,7 @@ public class Territories extends javax.swing.JPanel {
         setForeground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(650, 600));
 
-        jPanel1.setBackground(new java.awt.Color(17, 125, 161));
+        jPanel1.setBackground(new java.awt.Color(255, 102, 102));
         jPanel1.setForeground(new java.awt.Color(17, 125, 161));
 
         tblCityDir.setModel(new javax.swing.table.DefaultTableModel(
@@ -121,7 +121,7 @@ public class Territories extends javax.swing.JPanel {
 
         lblEncounterHist.setFont(new java.awt.Font("Segoe UI Semibold", 1, 36)); // NOI18N
         lblEncounterHist.setForeground(new java.awt.Color(255, 255, 255));
-        lblEncounterHist.setText("Add Territories");
+        lblEncounterHist.setText("Add Communities");
 
         btnView.setText("View");
         btnView.addActionListener(new java.awt.event.ActionListener() {

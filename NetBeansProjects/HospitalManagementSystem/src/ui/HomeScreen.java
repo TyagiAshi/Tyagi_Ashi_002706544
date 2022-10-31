@@ -93,7 +93,7 @@ public class HomeScreen extends javax.swing.JPanel {
 
         lblAddPerson.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
         lblAddPerson.setForeground(new java.awt.Color(255, 255, 255));
-        lblAddPerson.setText("Workforce");
+        lblAddPerson.setText("Person");
         lblAddPerson.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lblAddPersonMouseEntered(evt);
